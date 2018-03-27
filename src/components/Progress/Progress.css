@@ -1,0 +1,19 @@
+
+#svg {
+  transform: rotate(-90deg);
+}
+
+#svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 2s ease-in-out;
+  stroke: rgba(0,0,0,.05);
+  stroke-width: 4px;
+}
+#svg #bar {
+  stroke: rgba(224, 172, 105, .9);
+}
+
+.progress-text {
+  font-size: 14px;
+  color: rgba(34, 51, 76, .7);
+}

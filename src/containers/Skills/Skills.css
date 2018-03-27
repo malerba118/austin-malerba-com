@@ -1,0 +1,44 @@
+.skills {
+  height: 100%;
+  position: relative;
+}
+
+.skills-content {
+  position: static;
+  color: rgba(34, 51, 76, 1);
+  height: 100%;
+  /* background: rgba(80,170,232,.7); */
+  background: rgba(255, 255, 255, .9);
+  padding: 64px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.subtitle {
+  color: rgba(34, 51, 76, .95);
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+.descriptions {
+  color: rgba(34, 51, 76, .7);
+  margin-top: 10px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.descriptions-left {
+  width: 45%;
+}
+
+.descriptions-right {
+  width: 45%;
+}
+
+.vertical-divider {
+  width: 1px;
+  background: rgba(34, 51, 76, .5);
+}

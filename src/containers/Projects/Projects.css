@@ -37,12 +37,6 @@
   background-size: cover;
 }
 
-.left-button {
-  position: absolute;
-  left: 8px;
-  top: calc(50% - 22px);
-}
-
 .title {
   font-size: 24px;
 }
@@ -74,6 +68,26 @@
   background: rgba(34, 51, 76, .5);
 }
 
-.fab button {
-  background-color: #e0ac69 !important;
+.fab div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  color: rgba(224, 172, 105, .8);
+  border: 2px solid rgba(224, 172, 105, .8) !important;
+  cursor: pointer;
+}
+
+.left-button {
+  position: absolute;
+  left: 8px;
+  top: calc(50% - 15px);
+}
+
+.right-button {
+  position: absolute;
+  right: 8px;
+  top: calc(50% - 15px);
 }

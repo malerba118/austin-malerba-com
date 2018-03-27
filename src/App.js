@@ -4,6 +4,7 @@ import './App.css';
 import { Switch, Route, Link, withRouter } from 'react-router-dom';
 import { Overview } from './containers/Overview/Overview';
 import { Projects } from './containers/Projects/Projects';
+import { Skills } from './containers/Skills/Skills';
 import { Menu } from './components/Menu/Menu';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -52,6 +53,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props.location.pathname)
     return (
       <div className="App">
         <div className="sidebar">
@@ -73,10 +75,10 @@ class App extends Component {
                 `location` to `Switch` so it can match
                 the old location as it animates out
             */}
-              <CSSTransition key={this.props.location.key} classNames="fade" timeout={300}>
+              <CSSTransition key={this.props.location.pathname} classNames="fade" timeout={{ enter: 900, exit: 900 }}>
                 <Switch location={this.props.location}>
-                  <Route exact path='/skills' component={Overview}/>
                   <Route exact path='/projects' component={Projects}/>
+                  <Route exact path='/skills' component={Skills}/>
                   <Route render={() => <div>Not Found</div>} />
                 </Switch>
               </CSSTransition>

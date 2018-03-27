@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Button from 'material-ui/Button';
 import ArrowBackIcon from 'material-ui-icons/ArrowBack';
+import ArrowForwardIcon from 'material-ui-icons/ArrowForward';
+
 import {TextTransition} from '../../components/TextTransition';
 import {ParagraphTransition} from '../../components/ParagraphTransition/ParagraphTransition';
 import {ImageTransition} from '../../components/ImageTransition/ImageTransition';
@@ -41,6 +43,21 @@ export class Projects extends Component {
       }
       else {
         nextIndex = prevState.currentProject-1
+      }
+      return ({
+        currentProject: nextIndex
+      });
+    })
+  }
+
+  nextProject = () => {
+    this.setState((prevState) => {
+      let nextIndex;
+      if (prevState.currentProject === projects.length - 1) {
+        nextIndex = 0
+      }
+      else {
+        nextIndex = prevState.currentProject+1
       }
       return ({
         currentProject: nextIndex
@@ -103,9 +120,14 @@ export class Projects extends Component {
 
         </div>
         <div className="left-button fab">
-          <Button onClick={this.previousProject} variant="fab" mini color="secondary" aria-label="add">
+          <div onClick={this.previousProject}>
             <ArrowBackIcon />
-          </Button>
+          </div>
+        </div>
+        <div className="right-button fab">
+          <div onClick={this.nextProject}>
+            <ArrowForwardIcon />
+          </div>
         </div>
         <div className="panel-2">
           <div className="primary-image-container">
