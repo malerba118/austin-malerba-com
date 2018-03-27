@@ -1,0 +1,10 @@
+@keyframes image-leave {
+    0%   {top: 0px; opacity: 1;}
+    100% {top: 0%; opacity: .75;}
+}
+
+
+@keyframes image-enter {
+  0%   {top: 5%; opacity: 0;}
+  100% {top: 0px; opacity: 1;}
+}

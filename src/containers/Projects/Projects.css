@@ -1,0 +1,79 @@
+.projects {
+  height: 100%;
+  position: relative;
+}
+
+.panel-1 {
+  color: rgba(34, 51, 76, 1);
+  box-sizing: border-box;
+  height: 50%;
+  /* background: rgba(80,170,232,.7); */
+  background: rgba(255, 255, 255, .9);
+  padding: 64px;
+}
+
+.panel-2 {
+  box-sizing: border-box;
+  height: 50%;
+  /* background: rgba(80,170,232,.4); */
+  background: rgba(255, 255, 255, .9);
+
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 380px;
+  width: 380px;
+  height: 280px;
+  background-image: url('/images/computer.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.left-button {
+  position: absolute;
+  left: 8px;
+  top: calc(50% - 22px);
+}
+
+.title {
+  font-size: 24px;
+}
+
+.subtitle {
+  color: rgba(34, 51, 76, .95);
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+.descriptions {
+  color: rgba(34, 51, 76, .7);
+  margin-top: 10px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.descriptions-left {
+  width: 45%;
+}
+
+.descriptions-right {
+  width: 45%;
+}
+
+.vertical-divider {
+  width: 1px;
+  background: rgba(34, 51, 76, .5);
+}
+
+.fab button {
+  background-color: #e0ac69 !important;
+}

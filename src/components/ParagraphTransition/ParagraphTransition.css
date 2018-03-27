@@ -1,0 +1,10 @@
+@keyframes paragraph-leave {
+    0%   {top: 0px; opacity: 1;}
+    100% {top: 0px; opacity: 0;}
+}
+
+
+@keyframes paragraph-enter {
+  0%   {top: 25px; opacity: 0;}
+  100% {top: 0px; opacity: 1;}
+}

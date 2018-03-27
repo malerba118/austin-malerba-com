@@ -1,0 +1,14 @@
+
+.menu-circle {
+  position: relative;
+  left: -6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  background: white;
+  transition: all .5s;
+}
+
+.menu-link {
+    transition: all .5s;
+}
