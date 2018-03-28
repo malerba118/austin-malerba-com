@@ -10,21 +10,42 @@ import { SkillItem } from '../../components/Progress/SkillItem';
 
 import './Skills.css'
 
-const projects = [
+const skills = [
   {
-    name: "Iconik Studio",
-    subTitle: "Hybrid Mobile App",
-    overview: "Iconik Studio is an vector graphics editor optimized for tablets. The user is provided a few dozen starter shapes that the can manipulate to create works of art!",
-    backgroundImage: "/images/sun.jpg",
-    primaryImage: "/images/iconik.png"
+    level: 90,
+    title: 'JavaScript',
+    subtitle: '4 Years Experience',
   },
   {
-    name: "Collab Playlists",
-    subTitle: "AngularJS Web App",
-    overview: "Collab Playlists was a web-app that allowed friends to queue music in real time to a shared playlist. It was intended as a tool for social gatherings to allow all party-goers music control.",
-    backgroundImage: "/images/woods.jpg",
-    primaryImage: "/images/pinning.png"
-  }
+    level: 80,
+    title: 'React',
+    subtitle: '1 Year Experience',
+  },
+  {
+    level: 80,
+    title: 'AngularJS',
+    subtitle: '2 Years Experience',
+  },
+  {
+    level: 70,
+    title: 'Python',
+    subtitle: '3 Years Experience',
+  },
+  {
+    level: 60,
+    title: 'Java',
+    subtitle: '3 Years Experience',
+  },
+  {
+    level: 50,
+    title: 'Angular 5',
+    subtitle: '1 Years Experience',
+  },
+  {
+    level: 50,
+    title: 'Ionic',
+    subtitle: '1 Years Experience',
+  },
 ]
 
 export class Skills extends Component {
@@ -41,23 +62,17 @@ export class Skills extends Component {
       <div className="skills">
         <ImageTransition
           style={{position: 'absolute', width: '100%', height: '100%', zIndex: -1}}
-          src={'/images/skills_background.jpg'}
+          src={'/images/skills_background2.jpg'}
           animationDuration={.6}
         />
         <div className="skills-content">
-          <SkillItem percent={90} text={'JavaScript'} subtext={'4 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-          <SkillItem percent={75} text={'Python'} subtext={'3 years experience'}/>
-
+          <div className="skills-title">Frontend</div>
+          <br/>
+          {skills.map((skill, i) => {
+            return (
+              <SkillItem key={i} percent={skill.level} text={skill.title} subtext={skill.subtitle}/>
+            )
+          })}
         </div>
       </div>
     );

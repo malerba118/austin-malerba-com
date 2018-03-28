@@ -1,6 +1,7 @@
 .projects {
   height: 100%;
   position: relative;
+  min-width: 700px;
 }
 
 .panel-1 {

@@ -35,11 +35,19 @@ function getMenuIndexByPath(pathname) {
 class App extends Component {
 
   state = {
-    activeMenuItem: 0
+    activeMenuItem: 0,
+    loading: true,
+    collapsedSidebar: true
   }
 
   componentDidMount() {
     this.setState({activeMenuItem: getMenuIndexByPath(this.props.location.pathname)})
+    setTimeout(() => {
+      this.setState({loading: false})
+    }, 3000)
+    setTimeout(() => {
+      this.setState({collapsedSidebar: false})
+    }, 3800)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -56,19 +64,21 @@ class App extends Component {
     console.log(this.props.location.pathname)
     return (
       <div className="App">
-        <div className="sidebar">
-          <div className="profile-picture"></div>
-          <div className="caption">
-            <p>Austin Malerba</p>
-            <p style={{fontSize: '14px', opacity:0.7, marginTop: '-10px'}}>Software Engineer</p>
+        <div className="sidebar" style={{width: this.state.loading ? '100%' : '280px'}}>
+          <div className="profile-picture-container" style={{top: this.state.collapsedSidebar ? 'calc(50% - 200px)' : '0px'}}>
+            <div className="profile-picture"></div>
+            <div className="caption">
+              <p>Austin Malerba</p>
+              <p style={{fontSize: '14px', opacity:0.7, marginTop: '-14px'}}>Software Engineer</p>
+            </div>
           </div>
           <br/>
-          <Menu className="menu" items={menuItems}
+          <Menu className="menu" style={{opacity: this.state.collapsedSidebar ? '0' : '1'}} items={menuItems}
           active={this.state.activeMenuItem}
           >
           </Menu>
         </div>
-        <div className="content">
+        <div className="content" style={{left: this.state.loading ? '100%' : '280px'}}>
           <TransitionGroup>
               {/* no different than other usage of
                 CSSTransition, just make sure to pass

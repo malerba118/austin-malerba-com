@@ -5,15 +5,18 @@
 
 .skills-content {
   position: static;
+  box-sizing: border-box;
+  overflow: auto;
   color: rgba(34, 51, 76, 1);
   height: 100%;
   /* background: rgba(80,170,232,.7); */
-  background: rgba(255, 255, 255, .9);
+  background: rgba(255, 255, 255, .88);
   padding: 64px;
 }
 
-.title {
+.skills-title {
   font-size: 24px;
+  text-align: center;
 }
 
 .subtitle {

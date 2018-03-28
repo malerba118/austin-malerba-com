@@ -9,7 +9,7 @@ export class SkillItem extends React.Component {
 
   render() {
     return (
-      <div style={{display: 'inline-block'}}>
+      <div style={{display: 'inline-block', padding: 16}}>
         <Progress percent={this.props.percent} />
         <div style={{
           textAlign: 'center',
